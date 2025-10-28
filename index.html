@@ -11,14 +11,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #e6ccff; /* light purple base */
+      background-color: #e6ccff; /* light purple */
       font-family: "Poppins", sans-serif;
       color: #333;
       position: relative;
       overflow: hidden;
     }
 
-    /* Gradient circle background */
+    /* gradient circles in the background */
     body::before {
       content: "";
       position: absolute;
@@ -57,6 +57,17 @@
       z-index: 1;
     }
 
+    [contenteditable="true"] {
+      outline: none;
+      cursor: text;
+      transition: background 0.2s ease;
+    }
+
+    [contenteditable="true"]:hover {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 5px;
+    }
+
     h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
@@ -78,9 +89,9 @@
 </head>
 <body>
   <div class="container">
-    <h1>Your Name</h1>
-    <h2>Your School</h2>
-    <p>Write a short introduction about yourself here. Keep it simple and friendly!</p>
+    <h1 contenteditable="true">Your Name</h1>
+    <h2 contenteditable="true">Your School</h2>
+    <p contenteditable="true">Write a short introduction about yourself here. You can click and edit this text directly!</p>
   </div>
 </body>
 </html>
